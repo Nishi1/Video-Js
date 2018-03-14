@@ -1,0 +1,68 @@
+<head>
+  <link href="http://vjs.zencdn.net/6.6.3/video-js.css" rel="stylesheet">
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+  <script src="http://vjs.zencdn.net/6.6.3/video.js"></script>  
+</head>
+
+<body>
+<div class="vd-outer">									
+	<video id="my-video" class="video-js" controls preload="auto" width="392" data-setup="{}">
+	<source src="/videos_for_homepage/video2_new.mp4" type='video/mp4'>
+	</video>				
+</div>
+<div class="vd-outer">				
+	<video id="my-video" class="video-js" controls preload="auto" width="392" data-setup="{}">
+	<source src="/videos_for_homepage/video3_new.mp4" type='video/mp4'>
+	</video>
+</div>
+<div class="vd-outer">	
+	<video id="my-video" class="video-js" controls preload="auto" width="392" data-setup="{}">
+	<source src="/videos_for_homepage/video4.mp4" type='video/mp4'>
+	</video>
+</div>
+<div class="vd-outer">	
+	<video id="my-video" class="video-js" controls preload="auto" width="392" data-setup="{}">
+	<source src="/videos_for_homepage/video5_new.mp4" type='video/mp4'>
+	</video>
+</div>  
+</body>
+
+Below style is used to change the default play icon:
+
+.vjs-big-play-button:before {   
+  width: 44px;
+  height:44px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/video-icon.png');
+  background-repeat: no-repeat;
+  border: none !important; 
+  box-shadow: none !important; 
+  content: "";
+  position:absolute;      
+}
+.video-js .vjs-big-play-button{transform:translate(-50%, -50%);left:50% !important ;top:50% !important;width:44px !important;height:44px !important;}
+  .vjs-big-play-button{background-color:transparent !important;border:none !important;}
+
+.vd-outer > .video-js{background:#000 !important;}
+.vjs-big-play-button .vjs-icon-placeholder:before{content:none !important;}
+
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+
+Below code is used to hide default player icon on iphone
+*::--webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+ 
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
